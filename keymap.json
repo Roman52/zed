@@ -44,9 +44,9 @@
       "ctrl-j": "workspace::ActivatePaneDown",
 
       // +LSP
-      "space c a": "editor::ToggleCodeActions",
-      "space .": "editor::ToggleCodeActions",
-      "space c r": "editor::Rename",
+      "space l a": "editor::ToggleCodeActions",
+      "space l r": "editor::Rename",
+      "space l f": "editor::Format",
       "g d": "editor::GoToDefinition",
       "g D": "editor::GoToDefinitionSplit",
       "g i": "editor::GoToImplementation",
@@ -74,8 +74,8 @@
 
       // + Buffers
       // Switch between buffers
-      "shift-h": "pane::ActivatePreviousItem",
-      "shift-l": "pane::ActivateNextItem",
+      // "shift-h": "pane::ActivatePreviousItem",
+      // "shift-l": "pane::ActivateNextItem",
       // Close active panel
       "shift-q": "pane::CloseActiveItem",
       "ctrl-q": "pane::CloseActiveItem",
@@ -88,6 +88,7 @@
       "space space": "file_finder::Toggle",
       // Project search
       "space /": "pane::DeploySearch",
+      "space f w": "pane::DeploySearch",
       // TODO: Open other files
       // Show project panel with current file
       "space e": "pane::RevealInProjectPanel",
@@ -217,4 +218,61 @@
   // }
   
   // Roman's
+
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-left": [
+        "workspace::IncreaseActiveDockSize",
+        {
+          "px": 0
+        }
+      ]
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-right": [
+        "workspace::DecreaseActiveDockSize",
+        {
+          "px": 0
+        }
+      ]
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-shift-d": "editor::DuplicateSelection"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-i": "editor::DuplicateSelection"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-d": [
+        "editor::SelectNext",
+        {
+          "replace_newest": false
+        }
+      ]
+    }
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "cmd-g": [
+        "editor::SelectPrevious",
+        {
+          "replace_newest": true
+        }
+      ]
+    }
+  }
 ]

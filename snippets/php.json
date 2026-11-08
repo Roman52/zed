@@ -1,0 +1,34 @@
+{
+  "php": {
+    "prefix": ["php"],
+    "body": [
+      "<?php $0 ?>"
+    ],
+    "description": ""
+  },
+  "phpp": {
+    "prefix": ["phpp"],
+    "body": [
+      "<?= $0 ?>"
+    ],
+    "description": ""
+  },
+  "dd": {
+    "prefix": ["dd"],
+    "body": [
+      "echo '<pre>';",
+      "print_r($0);",
+      "echo '</pre>';"
+    ],
+    "description": ""
+  },
+  "ddd": {
+    "prefix": ["ddd"],
+    "body": [
+      "echo '<pre>';",
+      "var_dump($0);",
+      "echo '</pre>';"
+    ],
+    "description": ""
+  }
+}
